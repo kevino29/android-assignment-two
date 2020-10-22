@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Assignment2</string>
+    <string name="tvIntro1">Welcome</string>
+    <string name="btnStart">Start Quiz!</string>
+    <string name="tvEnterName">Enter your name:</string>
+    <string name="tvIntro2">to</string>
+    <string name="tvIntro3" translatable="false">the</string>
+    <string name="tvIntro4">Quiz!</string>
+    <string name="tpEnterNameHint">Type your name here...</string>
+</resources>
