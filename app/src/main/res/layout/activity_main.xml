@@ -9,6 +9,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
         android:gravity="center">
 
         <TableRow
@@ -25,6 +26,7 @@
                 android:gravity="center"
                 android:paddingBottom="10dp"
                 android:text="@string/tvIntro1"
+                android:textColor="#FFFFFF"
                 android:textSize="50sp" />
 
         </TableRow>
@@ -42,6 +44,7 @@
                 android:gravity="center"
                 android:paddingBottom="10dp"
                 android:text="@string/tvIntro2"
+                android:textColor="#FFFFFF"
                 android:textSize="25sp" />
         </TableRow>
 
@@ -56,9 +59,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:paddingBottom="10dp"
                 android:text="@string/tvIntro3"
-                android:textSize="25sp"
-                android:paddingBottom="10dp" />
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
 
         </TableRow>
 
@@ -75,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/tvIntro4"
+                android:textColor="#FFFFFF"
                 android:textSize="50sp" />
         </TableRow>
 
@@ -88,10 +93,11 @@
                 android:id="@+id/tvEnterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:text="@string/tvEnterName"
-                android:textSize="20sp"
-                android:layout_marginEnd="10dp" />
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/ptName"
@@ -101,7 +107,8 @@
                 android:ems="10"
                 android:gravity="center"
                 android:hint="@string/tpEnterNameHint"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF" />
         </TableRow>
 
     </TableLayout>
@@ -122,9 +129,12 @@
                 android:id="@+id/btnStart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_margin="10dp"
                 android:layout_span="1"
                 android:layout_weight="1"
-                android:text="@string/btnStart" />
+                android:background="@color/buttonColours"
+                android:text="@string/btnStart"
+                android:textColor="#FFFFFF" />
         </TableRow>
     </TableLayout>
 

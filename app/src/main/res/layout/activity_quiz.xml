@@ -60,14 +60,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Option One" />
 
             <Button
-                android:id="@+id/bntOption2"
+                android:id="@+id/btnOption2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Option Two" />
 
         </TableRow>
 
@@ -81,14 +83,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Option Three" />
 
             <Button
                 android:id="@+id/btnOption4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:text="Option Four" />
         </TableRow>
 
         <TableRow
