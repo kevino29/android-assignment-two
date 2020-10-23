@@ -27,7 +27,7 @@
                 android:paddingBottom="10dp"
                 android:text="@string/tvIntro1"
                 android:textColor="#FFFFFF"
-                android:textSize="50sp" />
+                android:textSize="60sp" />
 
         </TableRow>
 
@@ -80,7 +80,7 @@
                 android:gravity="center"
                 android:text="@string/tvIntro4"
                 android:textColor="#FFFFFF"
-                android:textSize="50sp" />
+                android:textSize="60sp" />
         </TableRow>
 
         <TableRow
@@ -104,11 +104,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
+                android:background="@drawable/et_bg"
                 android:ems="10"
                 android:gravity="center"
                 android:hint="@string/tpEnterNameHint"
                 android:inputType="textPersonName"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/buttonColours"
+                android:textSize="19sp" />
         </TableRow>
 
     </TableLayout>
@@ -122,8 +124,9 @@
 
         <TableRow
             android:id="@+id/row5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
 
             <Button
                 android:id="@+id/btnStart"
@@ -132,9 +135,10 @@
                 android:layout_margin="10dp"
                 android:layout_span="1"
                 android:layout_weight="1"
-                android:background="@color/buttonColours"
+                android:background="@drawable/buttons"
                 android:text="@string/btnStart"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
         </TableRow>
     </TableLayout>
 

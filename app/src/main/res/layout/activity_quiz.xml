@@ -8,7 +8,8 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient">
 
         <TableRow
             android:id="@+id/row0"
@@ -20,8 +21,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/buttonColours"
                 android:gravity="center"
                 android:text="@string/tvQuestionNum"
+                android:textColor="#FFFFFF"
                 android:textSize="40sp" />
 
         </TableRow>
@@ -35,11 +38,13 @@
                 android:id="@+id/tvQuestion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="15dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="@string/tvQuestion"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -61,7 +66,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Option One" />
+                android:background="@drawable/buttons"
+                android:text="Option One"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/btnOption2"
@@ -69,7 +76,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Option Two" />
+                android:background="@drawable/buttons"
+                android:text="Option Two"
+                android:textColor="#FFFFFF" />
 
         </TableRow>
 
@@ -84,7 +93,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Option Three" />
+                android:background="@drawable/buttons"
+                android:text="Option Three"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/btnOption4"
@@ -92,7 +103,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Option Four" />
+                android:background="@drawable/buttons"
+                android:text="Option Four"
+                android:textColor="#FFFFFF" />
         </TableRow>
 
         <TableRow
