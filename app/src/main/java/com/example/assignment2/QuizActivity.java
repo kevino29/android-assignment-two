@@ -12,6 +12,8 @@ public class QuizActivity extends AppCompatActivity {
     private ArrayList<Button> options = new ArrayList<>();
     private TextView tvQuestionNum;
     private TextView tvQuestion;
+    private ProgressBar pbProgress;
+    private int progress = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,7 @@ public class QuizActivity extends AppCompatActivity {
 
         tvQuestionNum = findViewById(R.id.tvQuestionNum);
         tvQuestion = findViewById(R.id.tvQuestion);
+        pbProgress = findViewById(R.id.pbProgress);
 
         for (int i = 0; i < 4; i++) {
             switch (i) {
@@ -41,9 +44,9 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private class OptionButtonClicked implements View.OnClickListener {
-
         @Override
         public void onClick(View view) {
+            progress++;
             switch (view.getId()) {
                 case R.id.btnOption1:
                     String s = null;
@@ -57,6 +60,7 @@ public class QuizActivity extends AppCompatActivity {
                     String a = "nothing";
                     break;
             }
+            pbProgress.setProgress(progress);
         }
     }
 }
