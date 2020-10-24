@@ -20,16 +20,14 @@ public class QuizActivity extends AppCompatActivity {
     private TextView tvQuestion;
     private ProgressBar pbProgress;
     private int progress;
-    private FileOutputStream fOut;
-    private FileInputStream fIn;
-    private OutputStreamWriter outWriter;
+    private InputStream is;
+    private BufferedReader br;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         init();
-        showQuiz();
 
         tvQuestionNum = findViewById(R.id.tvQuestionNum);
         tvQuestion = findViewById(R.id.tvQuestion);
@@ -52,16 +50,28 @@ public class QuizActivity extends AppCompatActivity {
             }
             options.get(i).setOnClickListener(new OptionButtonClicked());
         }
+        showQuiz();
     }
 
     private void init() {
         answer = null;
         progress = 0;
+        getQuizData();
+    }
+
+    private void getQuizData() {
+        String input = "";
+        String[] inputs = new String[2];
 
         try {
-            fOut = openFileOutput("questions.txt", MODE_PRIVATE);
-            outWriter = new OutputStreamWriter(fOut);
+            is = getResources().openRawResource(R.raw.quiz_data);
+            br = new BufferedReader(new InputStreamReader(is));
 
+            while ((input = br.readLine()) != null) {
+                inputs = input.split("@");
+                questions.add(inputs[0]);
+                answers.add(inputs[1]);
+            }
         }
         catch (IOException e) {
             System.out.println("An IO error has occurred.");
