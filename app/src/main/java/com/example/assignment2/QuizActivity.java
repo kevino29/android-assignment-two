@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.*;
 import android.os.*;
+import android.util.*;
 import android.view.View;
 import android.widget.*;
 
@@ -19,9 +20,9 @@ public class QuizActivity extends AppCompatActivity {
     private TextView tvQuestion;
     private ProgressBar pbProgress;
     private int progress;
-    private File questionsFile;
-    private File answersFile;
-    private Scanner scanner;
+    private FileOutputStream fOut;
+    private FileInputStream fIn;
+    private OutputStreamWriter outWriter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,22 +57,20 @@ public class QuizActivity extends AppCompatActivity {
     private void init() {
         answer = null;
         progress = 0;
-        questionsFile = new File(getApplicationContext().getFilesDir(),"questions.txt");
-        answersFile = new File(getApplicationContext().getFilesDir(),"answers.txt");
 
         try {
-            scanner = new Scanner(questionsFile);
-            while (scanner.hasNextLine()) {
-                questions.add(scanner.nextLine());
-            }
+            fOut = openFileOutput("questions.txt", MODE_PRIVATE);
+            outWriter = new OutputStreamWriter(fOut);
 
-            scanner = new Scanner(answersFile);
-            while (scanner.hasNextLine()) {
-                answers.add(Arrays.toString(scanner.nextLine().split("$")));
-            }
         }
-        catch (FileNotFoundException e) {
-            System.out.println("An error has occurred.");
+        catch (IOException e) {
+            System.out.println("An IO error has occurred.");
+            Log.e("Error", "File IO");
+            e.printStackTrace();
+        }
+        catch (Exception e) {
+            System.out.println("An unexpected error has occurred.");
+            Log.e("Error", "General Error");
             e.printStackTrace();
         }
     }
