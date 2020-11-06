@@ -23,6 +23,7 @@ public class QuizActivity extends AppCompatActivity {
     private ProgressBar pbProgress;
     private int progress;
     private int questionNumber;
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,7 @@ public class QuizActivity extends AppCompatActivity {
         correctAnswer = null;
         progress = 0;
         questionNumber = 0;
+        score = 0;
         getQuizData();
     }
 
@@ -139,8 +141,18 @@ public class QuizActivity extends AppCompatActivity {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent("ResultsActivity");
                 Bundle extras = getIntent().getExtras();
-                Intent intent = new Intent("");
+
+                try {
+                    extras.putInt("SCORE", score);
+                    intent.putExtras(extras);
+                } catch (Exception e) {
+                    System.out.println("An unexpected error has occurred.");
+                    Log.e("Error", "General Error");
+                    e.printStackTrace();
+                }
+
                 startActivity(intent);
             }
         });
@@ -155,8 +167,10 @@ public class QuizActivity extends AppCompatActivity {
         public void onClick(View view) {
             String inputAnswer = ((Button)view).getText().toString();
 
-            if (inputAnswer.equals(correctAnswer))
+            if (inputAnswer.equals(correctAnswer)) {
                 Toast.makeText(getApplicationContext(), "That is the correct answer!", Toast.LENGTH_SHORT).show();
+                score++;
+            }
             else
                 Toast.makeText(getApplicationContext(), "That is the wrong answer!", Toast.LENGTH_SHORT).show();
 
