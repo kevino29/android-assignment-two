@@ -43,7 +43,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:max="20" />
+                android:max="10" />
         </TableRow>
 
         <TableRow
@@ -63,14 +63,16 @@
                 android:padding="10dp"
                 android:text="@string/tvQuestion"
                 android:textColor="#FFFFFF"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
         </TableRow>
 
     </TableLayout>
 
     <TableLayout
+        android:id="@+id/tlOptions"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
         android:gravity="bottom">
 
         <TableRow
@@ -80,19 +82,9 @@
 
             <Button
                 android:id="@+id/btnOption1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/buttons"
-                android:text="@string/btnOption"
-                android:textColor="#FFFFFF" />
-
-            <Button
-                android:id="@+id/btnOption2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="6dp"
                 android:layout_weight="1"
                 android:background="@drawable/buttons"
                 android:text="@string/btnOption"
@@ -106,24 +98,15 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnOption3"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnOption2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="6dp"
                 android:layout_weight="1"
                 android:background="@drawable/buttons"
                 android:text="@string/btnOption"
                 android:textColor="#FFFFFF" />
 
-            <Button
-                android:id="@+id/btnOption4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/buttons"
-                android:text="@string/btnOption"
-                android:textColor="#FFFFFF" />
         </TableRow>
 
         <TableRow
@@ -131,6 +114,58 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/btnOption3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttons"
+                android:text="@string/btnOption"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnOption4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttons"
+                android:text="@string/btnOption"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tlContinue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:gravity="bottom"
+        android:visibility="gone">
+
+        <TableRow
+            android:id="@+id/trContinue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttons"
+                android:text="@string/btnContinue"
+                android:textColor="@android:color/white"
+                android:visibility="visible" />
         </TableRow>
 
     </TableLayout>

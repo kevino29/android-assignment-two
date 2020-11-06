@@ -9,5 +9,6 @@
     <string name="tvIntro4">Quiz!</string>
     <string name="tpEnterNameHint">Type your name here...</string>
     <string name="tvQuestionNum">Question #</string>
-    <string name="tvQuestion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit enim bibendum nunc dapibus suscipit vel eu mi. Integer placerat lorem eu mi dictum, ac dictum tellus auctor. Sed elit quam, facilisis quis placerat ac, rhoncus nec lorem. Donec vel ligula turpis. Sed volutpat felis placerat mi porttitor maximus. Vivamus et augue vitae diam ultrices vehicula. Fusce sit amet orci in urna facilisis ultricies sit amet eu magna. Vivamus a sapien finibus, ultrices nisl id, luctus sem. Quisque a fermentum tellus, a maximus felis. Sed tempus in nunc et tempor. Praesent consectetur odio orci, a imperdiet purus consectetur at.</string>
+    <string name="tvQuestion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit enim bibendum nunc dapibus suscipit vel eu mi. Integer placerat lorem eu mi dictum, ac dictum tellus auctor.</string>
+    <string name="btnContinue">Continue</string>
 </resources>
