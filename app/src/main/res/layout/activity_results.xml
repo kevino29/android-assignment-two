@@ -38,7 +38,7 @@
         android:gravity="center">
 
         <TableRow
-            android:id="@+id/row1"
+            android:id="@+id/trEndQuiz"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -55,17 +55,45 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/row2"
+            android:id="@+id/trName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvNameLabel"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/trScore"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvScoreLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvScoreLabel"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/tvScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/tvScore"
                 android:textColor="@android:color/white"
                 android:textSize="30sp" />
         </TableRow>

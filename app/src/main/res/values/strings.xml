@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Assignment2</string>
+    <string name="app_name">Quiz Builder</string>
     <string name="tvIntro1">Welcome</string>
     <string name="btnStart">Start Quiz!</string>
     <string name="btnOption">Option</string>
@@ -13,6 +13,7 @@
     <string name="btnContinue">Continue</string>
     <string name="tvResults">Results</string>
     <string name="tvEndQuiz">End of Quiz</string>
-    <string name="tvScore">Your score is: xx out of xx</string>
+    <string name="tvScoreLabel">Your score: </string>
     <string name="btnTryAgain">Try Again</string>
+    <string name="tvNameLabel">Your name: </string>
 </resources>
