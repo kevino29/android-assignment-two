@@ -11,4 +11,8 @@
     <string name="tvQuestionNum">Question #</string>
     <string name="tvQuestion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit enim bibendum nunc dapibus suscipit vel eu mi. Integer placerat lorem eu mi dictum, ac dictum tellus auctor.</string>
     <string name="btnContinue">Continue</string>
+    <string name="tvResults">Results</string>
+    <string name="tvEndQuiz">End of Quiz</string>
+    <string name="tvScore">Your score is: xx out of xx</string>
+    <string name="btnTryAgain">Try Again</string>
 </resources>

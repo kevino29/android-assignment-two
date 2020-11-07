@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                     extras.putString("NAME", name);
                     i.putExtras(extras);
 
-                    startActivityForResult(i, 1);
+//                    startActivityForResult(i, 1);
+                    startActivity(i);
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Please enter a name to continue", Toast.LENGTH_LONG).show();

@@ -145,8 +145,10 @@ public class QuizActivity extends AppCompatActivity {
                 Bundle extras = getIntent().getExtras();
 
                 try {
-                    extras.putInt("SCORE", score);
-                    intent.putExtras(extras);
+                    if (extras != null) {
+                        extras.putInt("SCORE", score);
+                        intent.putExtras(extras);
+                    }
                 } catch (Exception e) {
                     System.out.println("An unexpected error has occurred.");
                     Log.e("Error", "General Error");
@@ -176,7 +178,7 @@ public class QuizActivity extends AppCompatActivity {
 
             pbProgress.setProgress(++progress);
 
-            if (quiz.size() != 0)
+            if (quiz.size() > 0)
                 showQuiz(++questionNumber);
             else
                 finishQuiz();
