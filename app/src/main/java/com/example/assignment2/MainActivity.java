@@ -26,14 +26,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 name = ptName.getText().toString();
 
-                if (!name.equals("")) {
+                if (!name.equals("")) { //checks if the name provided is not null
                     Intent i = new Intent("QuizActivity");
                     Bundle extras = new Bundle();
 
                     extras.putString("NAME", name);
                     i.putExtras(extras);
 
-//                    startActivityForResult(i, 1);
                     startActivity(i);
                 }
                 else {

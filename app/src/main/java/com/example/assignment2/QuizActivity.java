@@ -16,7 +16,6 @@ public class QuizActivity extends AppCompatActivity {
     private ArrayList<Button> options;
     private ArrayList<String> answerOptions;
     private ArrayList<String> answers;
-    private String answer;
     private String correctAnswer;
     private TextView tvQuestionNum;
     private TextView tvQuestion;
@@ -60,7 +59,6 @@ public class QuizActivity extends AppCompatActivity {
         options = new ArrayList<>();
         answerOptions = new ArrayList<>();
         answers = new ArrayList<>();
-        answer = null;
         correctAnswer = null;
         progress = 0;
         questionNumber = 0;
@@ -71,8 +69,8 @@ public class QuizActivity extends AppCompatActivity {
     private void getQuizData() {
         InputStream is;
         BufferedReader br;
-        String input = "";
-        String[] inputs = new String[2];
+        String input;
+        String[] inputs;
 
         try {
             is = getResources().openRawResource(R.raw.quiz_data);
@@ -107,17 +105,17 @@ public class QuizActivity extends AppCompatActivity {
     private void showQuiz(int questionNum) {
         correctAnswer = answers.get(questionNum);
         if (answerOptions.size() > 0)
-            answerOptions.clear();
+            answerOptions.clear(); //resets the options
 
         tvQuestionNum.setText(String.format("Question %d", questionNum+1));
         tvQuestion.setText(quiz.get(correctAnswer));
-        quiz.remove(correctAnswer);
+        quiz.remove(correctAnswer); //removes the question from the hash map
 
         answerOptions.add(correctAnswer);
         while (answerOptions.size() != 4) {
-            String temp = answers.get(getRandomNum(0, 9));
+            String temp = answers.get(getRandomNum(0, quiz.size()-1));
 
-            if (!answerOptions.contains(temp))
+            if (!answerOptions.contains(temp)) //checks for any duplication in the options
                 answerOptions.add(temp);
         }
         Collections.shuffle(answerOptions);
@@ -146,7 +144,7 @@ public class QuizActivity extends AppCompatActivity {
 
                 try {
                     if (extras != null) {
-                        extras.putInt("SCORE", score);
+                        extras.putInt("SCORE", score); //adds the final score to the bundle
                         intent.putExtras(extras);
                     }
                 } catch (Exception e) {
@@ -154,7 +152,6 @@ public class QuizActivity extends AppCompatActivity {
                     Log.e("Error", "General Error");
                     e.printStackTrace();
                 }
-
                 startActivity(intent);
             }
         });
@@ -167,7 +164,7 @@ public class QuizActivity extends AppCompatActivity {
     private class OptionButtonClicked implements View.OnClickListener {
         @Override
         public void onClick(View view) {
-            String inputAnswer = ((Button)view).getText().toString();
+            String inputAnswer = ((Button)view).getText().toString(); //gets the answer from the button
 
             if (inputAnswer.equals(correctAnswer)) {
                 Toast.makeText(getApplicationContext(), "That is the correct answer!", Toast.LENGTH_SHORT).show();
@@ -178,7 +175,7 @@ public class QuizActivity extends AppCompatActivity {
 
             pbProgress.setProgress(++progress);
 
-            if (quiz.size() > 0)
+            if (quiz.size() > 0) //checks if the quiz is not empty
                 showQuiz(++questionNumber);
             else
                 finishQuiz();
