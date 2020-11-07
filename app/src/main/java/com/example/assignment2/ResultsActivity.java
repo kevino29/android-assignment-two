@@ -2,6 +2,7 @@ package com.example.assignment2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,12 +35,12 @@ public class ResultsActivity extends AppCompatActivity {
         }
 
         tvName.setText(name);
-        tvScore.setText(score);
+        tvScore.setText(String.valueOf(score + " / 10"));
 
         btnTryAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(ResultsActivity.this, MainActivity.class));
             }
         });
     }

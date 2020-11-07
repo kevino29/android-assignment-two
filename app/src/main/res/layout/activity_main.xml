@@ -32,7 +32,7 @@
         </TableRow>
 
         <TableRow
-            android:id="@+id/row1"
+            android:id="@+id/trQuestion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">
@@ -101,7 +101,7 @@
 
             <EditText
                 android:id="@+id/ptName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:background="@drawable/et_bg"

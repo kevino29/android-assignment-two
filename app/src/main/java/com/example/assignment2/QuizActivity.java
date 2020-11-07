@@ -131,7 +131,7 @@ public class QuizActivity extends AppCompatActivity {
     private void finishQuiz() {
         TableLayout tlOptions = findViewById(R.id.tlOptions);
         TableLayout tlContinue = findViewById(R.id.tlContinue);
-        TableRow trQuestion = findViewById(R.id.trEndQuiz);
+        TableRow trQuestion = findViewById(R.id.trQuestion);
         Button btnContinue = findViewById(R.id.btnContinue);
 
         tlOptions.setVisibility(View.GONE);

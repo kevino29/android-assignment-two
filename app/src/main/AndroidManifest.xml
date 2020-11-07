@@ -16,6 +16,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name=".QuizActivity">
             <intent-filter>
                 <action android:name="QuizActivity" />
@@ -23,9 +24,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:launchMode="singleTask" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
