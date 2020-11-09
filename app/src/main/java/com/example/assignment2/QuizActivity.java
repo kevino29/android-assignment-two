@@ -113,7 +113,7 @@ public class QuizActivity extends AppCompatActivity {
 
         answerOptions.add(correctAnswer);
         while (answerOptions.size() != 4) {
-            String temp = answers.get(getRandomNum(0, quiz.size()-1));
+            String temp = answers.get(getRandomNum(0, answers.size()-1));
 
             if (!answerOptions.contains(temp)) //checks for any duplication in the options
                 answerOptions.add(temp);
